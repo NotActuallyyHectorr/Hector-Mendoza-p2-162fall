@@ -1,1 +1,8 @@
-<p>item-list works!</p>
+<h1>Item List</h1>
+<ul>
+    <li *ngFor="let item of items">
+        <a [routerLink]="['/detail', item.id]">{{ item.name }}</a>
+        <button (click)="deleteItem(item.id)">Delete</button>
+    </li>
+</ul>
+<a routerLink="/add">Add New Item</a>
